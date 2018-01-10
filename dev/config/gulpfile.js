@@ -5,18 +5,18 @@ var gutil = require( 'gulp-util' );
 var ftp = require( 'vinyl-ftp' );
 
 /** Configuration **/
-var user = "karrot";  
-var password = "Rabbio11";  
-var host = 'ftp.karrot.nazwa.pl';  
+var user = "";  
+var password = "";  
+var host = '';  
 var port = 21;  
 var localFilesGlob = [
-    'assets/**',
-    'inc/**',
-    'template-parts/**',
-    'templates/**',
-    '*.php',
+    '../../assets/**',
+    '../../inc/**',
+    '../../template-parts/**',
+    '../../templates/**',
+    '../../*.php',
 ];  
-var remoteFolder = '/blog/wp-content/themes/test/'
+var remoteFolder = '/blog/wp-content/themes/rwp/'
 
 
 function getFtpConnection() {  
