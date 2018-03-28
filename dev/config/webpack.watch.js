@@ -12,7 +12,7 @@ module.exports = webpackMerge(commonConfig, {
 	devtool: 'source-map',
 
 	output: {
-		path: path.resolve(__dirname, '../..') + '/assets',
+		path: path.resolve(__dirname, '../../') + '/assets',
 		publicPath: '',
 		filename: '[name].js',
 		chunkFilename: '[id].chunk.js'
@@ -32,8 +32,8 @@ module.exports = webpackMerge(commonConfig, {
 			}
 		}),
 		new CopyWebpackPlugin([{
-			from: './images',
-			to: './images'
+			from: path.resolve(__dirname, '../../') + '/dev/images',
+			to: path.resolve(__dirname, '../../') + '/assets/images'
 		}]),
 		new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
 

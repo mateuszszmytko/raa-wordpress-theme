@@ -1,0 +1,50 @@
+@import "../config";
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: $grid-gutter/-2;
+	margin-left: $grid-gutter/-2;
+
+	&--align-start {
+		align-items: flex-start;
+	}
+	&--align-center {
+		align-items: center;
+	}
+	&--align-end {
+		align-items: flex-end;
+	}
+
+	&--justify-start {
+		justify-content: flex-start;
+	}
+
+	&--justify-end {
+		justify-content: flex-end;
+	}
+
+	&--justify-center {
+		justify-content: center;
+	}
+
+	&--justify-around {
+		justify-content: space-around;
+	}
+
+	&--justify-between {
+		justify-content: space-between;
+	}
+
+	&--no-gutters {
+		margin-right: 0;
+		margin-left: 0;
+	  
+		& > .col,
+		& > [class*="col-"] {
+		  padding-right: 0;
+		  padding-left: 0;
+		}
+	}
+}
+

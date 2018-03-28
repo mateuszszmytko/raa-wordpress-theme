@@ -14,9 +14,9 @@
 
 get_header(); ?>
 <?php
-	get_template_part( 'template-parts/content', 'none' );
+	get_template_part( 'template-contents/content', 'none' );
 ?>
-<h1>elo</h1>
+
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

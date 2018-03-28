@@ -1,4 +1,30 @@
 <?php
+
+class RWPCustomPosts {
+	var $args;
+	var $postName;
+
+	function RWPCustomPosts($postName, $args) {
+		$this->__construct($postName, $args);
+	}
+
+	function __construct($postName, $args) {
+		$this->args = $args;
+		$this->postName = $postName;
+
+		add_action( 'init', array( $this, 'createPost' ), 0 );
+		
+	}
+
+	function createPost() {
+		register_post_type( $this->postName, $this->$args );
+	}
+}
+
+function addPostType($postName, $args) {
+	return new RWPCustomPosts($postName, $args);
+}
+
 /*
 * Creating a function to create our CPT
 
@@ -75,4 +101,6 @@ function custom_post_type() {
 	}
 	// Hooking up our function to theme setup
 	add_action( 'init', 'create_posttype' );  */
+
+	
 ?>

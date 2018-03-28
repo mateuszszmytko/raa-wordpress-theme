@@ -1,13 +1,14 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * Template part for displaying a message that posts cannot be found
  *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package raa_theme
+ * @package RWP
  */
 
-get_header(); ?>
+?>
+
 <main class="error-404 not-found">
 	<header class="page__header">
 		<div class="container">
@@ -21,6 +22,3 @@ get_header(); ?>
 		</div>
 	</section>
 </main>
-	
-<?php
-get_footer();

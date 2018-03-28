@@ -1,5 +1,12 @@
 //
+@import "~normalize.css";
+@import "ensure-grid/ensure-grid";
+
+@import 'core/__core';
+@import 'templates/__templates';
+@import 'pages/__pages';
+@import 'components/__components';
+
 body {
-	background: white;
-	display: flex;
+	background: red;
 }
